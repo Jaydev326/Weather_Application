@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <div class="bg-gradient-to-t from-green-400 via-orange-300" id="container">
+  
+      <div class="min-h-screen flex items-center justify-center">
+        <div class="flex flex-col bg-blue-100 rounded-3xl p-4 w-full max-w-sm ">
+          <!-- Heading  -->
+          <div class="pb-5 text-3xl font-bold flex justify-center border-solid px-2">
+            Weather App
+          </div>
+          <!-- Weather Info -->
+          <div class="flex justify-between px-2">
+            <input type="text" id="city" placeholder="Enter Location"
+              class="border-solid border-2 border-sky-300 rounded-lg pl-2">
+            <div  class=" text-4xl">
+              <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass "></i></button>
+            </div>
+          </div><br>
+
+          <!-- Main component -->
+          <div class="font-bold text-xl" id="city-name">Sydney</div>
+          <div id="curr-time" class="text-base text-gray-500">Thursday 10 May 2020</div>
+          
+          <!-- 2nd row logo cloud -->
+          <div class="flex justify-center mt-4 self-center items-center h-24 w-32">  
+            <img class="h-36" src="http://openweathermap.org/img/w/04d.png">
+          </div>
+
+          <!-- third row (temp,clouds) -->
+          <div class="flex flex-row items-center justify-evenly">
+            <div class="font-medium text-6xl" id="temp">24°c</div>
+            <div class="flex flex-col items-center ml-6">
+              <div id="weather" class="font-medium" >Cloudy</div>
+              <div class="flex ">
+                <div id="max-temp">28°/</div>
+                <div id="min-temp">20°</div>
+              </div>
+            </div>
+          </div>
+          <!-- last row (wind humidity visibiliity) -->
+          <div class="flex justify-self-end">
+            <div class="flex flex-col justify-center items-center border-2 border-transparent">
+              <img src="Images/wind.png" class="h-1/2">
+              <div class="font-medium text-sm">WindSpeed</div>
+              <div id="wind" class="text-lg text-gray-500">9k/h</div>
+            </div>
+            <div class="flex flex-col justify-center items-center border-2 border-transparent ">
+              <img src="Images/humidity.png" class="h-1/2">
+              <div class="font-medium text-sm">Humidity</div>
+              <div id="humidity" class="text-lg text-gray-500">68%</div>
+            </div>
+            <div class="flex flex-col justify-center items-center border-2 border-transparent ">
+              <img src="Images/cloud.png" class="h-1/2">
+              <div class="font-medium text-sm">Clouds</div>
+              <div id="clouds" class="text-lg text-gray-500">75%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script
+      src="https://kit.fontawesome.com/2cdf0c7656.js"
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
